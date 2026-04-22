@@ -105,6 +105,19 @@
 
   --animate-fade-in-up: fade-in-up 1s both;
   --animate-fade-in-right: fade-in-right 1s both;
+  --animate-infinity-horizontal: infinity-horizontal 2s ease-in-out infinite;
+
+  @keyframes infinity-horizontal {
+
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(8px);
+    }
+  }
 
   @keyframes fade-in-up {
     0% {
@@ -147,6 +160,24 @@
   border: 1px solid var(--color-primary-container);
 }
 
+@keyframes scroll-x {
+  to {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+@utility animate-scroll-x {
+  animation: scroll-x linear;
+  animation-timeline: --horizontal-scroll;
+  animation-range: entry 100% exit 0%;
+  /* Hold the final translated position once scroll exits the range */
+  animation-fill-mode: both;
+}
+
+@utility timeline-horizontal-scroll {
+  view-timeline-name: --horizontal-scroll;
+}
+
 @utility lime-glow {
   &:hover {
     box-shadow: 0 0 30px rgba(198, 241, 116, 0.25);
@@ -180,6 +211,12 @@
 :root {
   background-color: var(--color-background);
   color: var(--color-on-background);
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(255, 0, 51, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(255, 0, 51, 0.09) 0%, transparent 60%);
 }
 
 html {

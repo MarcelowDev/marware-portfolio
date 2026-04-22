@@ -44,7 +44,7 @@ export default function RootLayout({
         {children}
 
         {/* Footer */}
-        <footer className="w-full py-20 bg-black/90 border-t border-white/10 mt-auto">
+        <footer className="w-full py-10 bg-black/90 border-t border-white/10 mt-auto">
           <div className="flex flex-col md:flex-row justify-between items-center px-16 max-w-7xl mx-auto gap-8 font-label-bold text-xs uppercase tracking-[0.2em]">
             <div className="text-lg font-black text-white">MarWare</div>
             <div className="text-white/40">© 2024 MarWare. BUILT FOR THE FUTURE.</div>
