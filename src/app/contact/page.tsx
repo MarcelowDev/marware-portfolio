@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen pt-32 pb-24 px-6 md:px-16 max-w-7xl mx-auto relative overflow-visible flex-grow w-full">
+    <main className="min-h-screen pt-32 pb-24 px-6 md:px-16 max-w-7xl mx-auto relative overflow-visible grow w-full">
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-on-tertiary-container/10 blur-[100px] rounded-full -z-10"></div>

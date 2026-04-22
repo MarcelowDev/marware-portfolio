@@ -64,7 +64,7 @@ export default function TechStack() {
             <h3 className="font-headline-md text-xl mb-xs">Tailwind CSS</h3>
             <p className="text-on-surface-variant text-sm mb-md">Utility-first styling with complex custom configurations and design systems.</p>
             <div className="w-full bg-white/5 h-1 rounded-full overflow-hidden">
-              <div className="bg-primary h-full w-[100%]"></div>
+              <div className="bg-primary h-full w-full"></div>
             </div>
           </div>
 
@@ -100,11 +100,11 @@ export default function TechStack() {
       <section className="animate-fade-in-up" style={{ animationDelay: "400ms" }}>
         <div className="flex items-center gap-4 mb-lg">
           <h2 className="font-headline-md text-headline-md">Backend <span className="text-white/20">/</span> Infrastructure</h2>
-          <div className="h-px flex-grow bg-white/10"></div>
+          <div className="h-px grow bg-white/10"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-md">
           {/* Large Backend Featured */}
-          <div className="glass-surface md:col-span-2 md:row-span-2 p-lg rounded-xl flex flex-col justify-between border-l-4 border-on-tertiary-container bg-gradient-to-br from-on-tertiary-container/5 to-transparent">
+          <div className="glass-surface md:col-span-2 md:row-span-2 p-lg rounded-xl flex flex-col justify-between border-l-4 border-on-tertiary-container bg-linear-to-br from-on-tertiary-container/5 to-transparent">
             <div>
               <div className="flex items-center gap-2 text-on-tertiary-container mb-md">
                 <span className="material-symbols-outlined">database</span>

@@ -16,7 +16,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 w-full items-center">
 
           {/* Left Content: Luminous Identity */}
-          <div className="col-span-1 md:col-span-7 lg:col-span-6 z-10 space-y-10 animate-fade-in-up">
+          <div className="col-span-1 md:col-span-7 lg:col-span-6 z-10 space-y-10 animate-zoom-in animate-duration-900 animate-delay-200">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-surface border border-white/10 shadow-xl backdrop-blur-md">
                 <span className="flex h-2 w-2 rounded-full bg-primary-container animate-ping"></span>
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
 
           {/* Right Content: Portrait & Composition */}
-          <div className="col-span-1 md:col-span-5 lg:col-span-6 flex justify-center items-center animate-fade-in-right">
+          <div className="col-span-1 md:col-span-5 lg:col-span-6 flex justify-center items-center animate-tada  animate-duration-900 animate-delay-200">
             <div className="relative group">
               {/* Outer Decorative Rings */}
               <div className="absolute -inset-8 border border-white/5 rounded-[4rem] animate-[spin_20s_linear_infinite] opacity-50"></div>
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
-              <div className="h-[1px] w-12 bg-primary-container"></div>
+              <div className="h-px w-12 bg-primary-container"></div>
               <span className="font-label-bold text-primary-container uppercase tracking-[0.4em] text-[10px]">Featured Work</span>
             </div>
             <h2 className="font-headline-lg text-5xl md:text-7xl tracking-tighter text-white">Selected Works</h2>
