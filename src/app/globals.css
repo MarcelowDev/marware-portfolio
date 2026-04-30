@@ -190,6 +190,18 @@
   }
 }
 
+@utility blue-glow {
+  &:hover {
+    box-shadow: 0 0 25px rgba(47, 98, 229, 0.65);
+  }
+}
+
+@utility orange-glow {
+  &:hover {
+    box-shadow: 0 0 25px rgba(255, 153, 0, 0.65);
+  }
+}
+
 @utility text-gradient-lime {
   background: linear-gradient(135deg, #ffffff 0%, #c6f174 100%);
   -webkit-background-clip: text;

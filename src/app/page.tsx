@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { HorizontalScrollCarousel } from "@/components/HorizontalScrollCarousel";
+import { IconBrandGithub, IconBrandLinkedin, IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
                 <div className="space-y-6">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-surface border border-white/10 shadow-xl backdrop-blur-md">
                     <span className="flex h-2 w-2 rounded-full bg-primary-container animate-ping"></span>
-                    <span className="font-label-sm tracking-[0.2em] text-white/60 uppercase text-[10px]">Senior Software Engineer</span>
+                    <span className="font-label-sm tracking-[0.2em] text-white/60 uppercase text-[10px]">Software Engineer</span>
                   </div>
 
                   <h1 className="font-headline-xl text-[clamp(3.5rem,8vw,6rem)] leading-[0.95] tracking-tight text-primary">
@@ -33,7 +34,7 @@ export default function Home() {
                   </h1>
 
                   <p className="font-body-lg text-white/50 text-xl md:text-2xl leading-relaxed max-w-2xl font-light">
-                    Architecting <span className="text-white italic">resilient backend ecosystems</span> and crafting <span className="text-primary-container">high-performance digital experiences</span> with technical precision and creative soul.
+                    I work in <span className="text-white italic">full-stack web application development </span> prioritizing clean architecture, performance, and scalability. <p className="text-primary-container"></p>
                   </p>
                 </div>
 
@@ -44,19 +45,19 @@ export default function Home() {
                   </Link>
 
                   <div className="flex items-center gap-4">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-2xl glass-surface flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary-container group">
-                      <span className="material-symbols-outlined text-white/40 group-hover:text-primary-container transition-colors">terminal</span>
+                    <a href="https://github.com/MarcelowDev" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-2xl glass-surface flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary-container group">
+                      <IconBrandGithub size={20} className="text-white/40 group-hover:text-primary-container transition-colors" />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-2xl glass-surface flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary-container group">
-                      <span className="material-symbols-outlined text-white/40 group-hover:text-primary-container transition-colors">language</span>
+                    <a href="https://www.linkedin.com/in/marcelo-rc/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-2xl glass-surface flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary-container group">
+                      <IconBrandLinkedin size={20} className="text-white/40 group-hover:text-primary-container transition-colors" />
                     </a>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-3 gap-8 pt-4 border-t border-white/5">
                   {[
-                    { label: "Experience", val: "3+ Years" },
-                    { label: "Projects", val: "3+" },
+                    { label: "Experience", val: "3+ years" },
+                    { label: "Projects", val: "5+ years" },
                     { label: "Uptime", val: "99.9%" }
                   ].map((stat, i) => (
                     <div key={i} className="space-y-1">
@@ -101,25 +102,25 @@ export default function Home() {
           </div>
           <span className="mt-12 group inline-flex items-center gap-4 px-8 py-4 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-500 font-label-bold uppercase text-[10px] tracking-widest w-fit cursor-default select-none animate-pulse">
             Explore All Projects
-            <span className="material-symbols-outlined  animate-infinity-horizontal">east</span>
+            <IconArrowRight size={16} className="animate-infinity-horizontal" />
           </span>
         </div>
 
         {/* PANELS 3+: PROJECT CARDS */}
         {[
           {
-            title: "Neon Fluidity",
-            tag: "Digital Art",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBI7DCBNo9tP2t11K4icwvCZgiRmtMfWaZPN8Wxv_we6cYGCysMVWt2uC6-q5m3GZz64UM6oLEc_O2Koc0rcKppQOlD-2rjgDEVDI86flggdk4O2pXxvThSsn2M-NNYvCt2iI06VUV3Inkmqux8T6IdHOkTbIFcDlt2_fnrE6Q02tQmnyqoh4B2rKTavTYfUcgh5EN85Q5LFngJ_RcM8gGSOaVqE9xAP57tkPMx4LBAbhv0ASup0TUsewIlI_DIzpM_CQrNhAdNZ54"
+            title: "Shorter Link",
+            tag: "Full Stack",
+            img: "/links_shorter_1.png"
           },
           {
-            title: "Lume App UI",
-            tag: "UI/UX Design",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCe619BDB3t2AkwdQxIVJE_g4JuHYV2CIVA9N_4UsgM0IReOLjdXlr4tK4CV7FcERkuqZtSQ6Or_fMx0QALlNbcTWi942kGkfzqECh_8DXOpen0pkje4T5Xc62IPPsa3_QARylQ7xpJd7NLQGvGgp0u-RgnBLFexcjFoQxunqkl1RYuTuocjyjk-yTHKGfEO9SACG49RTuuWHqE5vnIeUH-Q36DNBW6zmDKt_F0W-bkj3ZuvKpDIANP5w9jgM3n85nY9ef9HtGruVM"
+            title: "Expense OCR",
+            tag: "Mobile App",
+            img: "/ocr_project.png"
           },
           {
-            title: "Cyber Spaces",
-            tag: "Archviz",
+            title: "Simple ERP",
+            tag: "Full Stack",
             img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDERP8cHD9Unvb5GYfTWhpREloQa65cQBurXUQC-37F3upmnz0CStogqspQqGu2K-_l-GnQx1ttAZ6iKjoJIwGe0pGW0Yz3mjWaDmXjv3uKhXBodeHnusSp7nzdN44TlgRWnJmPwDMdWVgC0ZfMeBjSuGXnEeXi0APBIHih3Qb8KwBR3cVtBnm_3gBFA565UKxNu0fjSRF1mHq7n6wUDpeSJffpD9B-AiKUNytSkaddwVMpuvfPQj3AFfqyOoiNsO5IM4vGUM70WSI"
           }
         ].map((project, i) => (
@@ -141,7 +142,7 @@ export default function Home() {
               <div className="pt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex justify-between items-center">
                 <span className="text-white/40 text-[10px] font-label-bold uppercase tracking-widest underline underline-offset-8">Case Study</span>
                 <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-primary-container transition-colors">
-                  <span className="material-symbols-outlined text-white group-hover:text-primary-container transition-colors">arrow_outward</span>
+                  <IconArrowUpRight size={20} className="text-white group-hover:text-primary-container transition-colors" />
                 </div>
               </div>
             </div>
@@ -153,18 +154,18 @@ export default function Home() {
       </HorizontalScrollCarousel>
 
       {/* CTA Section */}
-      <section className="pt-32 px-8 md:px-16 max-w-7xl mx-auto mb-32 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+      <section className="pt-32 px-8 md:px-16 max-w-7xl mx-auto mb-24 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
         <div className="glass-surface rounded-[4rem] p-16 md:p-32 text-center border-white/5 relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-container/10 blur-[150px] mr-[-400px] mt-[-400px] group-hover:bg-primary-container/20 transition-all duration-1000"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-rose-accent/10 blur-[130px] ml-[-300px] mb-[-300px] opacity-40"></div>
 
           <div className="relative z-10 max-w-4xl mx-auto space-y-10">
             <h2 className="font-headline-lg text-6xl md:text-8xl tracking-tight text-white leading-[1.1]">
-              Ready to <br />
-              <span className="text-gradient-lime italic">elevate</span> your project?
+              What are you <br />
+              <span className="text-gradient-lime italic">building</span>?
             </h2>
             <p className="font-body-lg text-white/50 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto font-light">
-              I am currently accepting select opportunities for high-impact collaborations. Let's build something that matters.
+              “Let’s build something that works - and looks good doing it. I care more about what works than what impresses.”
             </p>
             <div className="pt-8">
               <Link href="/contact" className="group relative px-16 py-8 rounded-[2.5rem] bg-white text-black font-label-bold text-lg uppercase tracking-[0.2em] transition-all duration-500 hover:bg-primary-container active:scale-95 shadow-[0_30px_60px_rgba(255,255,255,0.1)] overflow-hidden inline-block">
@@ -178,4 +179,3 @@ export default function Home() {
     </main>
   );
 }
-
