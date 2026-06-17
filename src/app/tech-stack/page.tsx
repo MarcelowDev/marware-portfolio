@@ -25,7 +25,7 @@ import {
 
 export default function TechStack() {
   return (
-    <main className="pt-32 pb-xl px-margin md:px-16 max-w-7xl mx-auto grow w-full relative">
+    <main className="pt-32 pb-20 px-5 md:px-16 max-w-7xl mx-auto grow w-full relative">
       {/* Decorative Elements */}
       <div className="fixed top-0 right-0 -z-10 w-[500px] h-[500px] bg-primary/5 blur-[120px] pointer-events-none"></div>
       <div className="fixed bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-on-tertiary-container/5 blur-[100px] pointer-events-none"></div>
@@ -36,7 +36,7 @@ export default function TechStack() {
           <IconTerminal2 size={16} className="text-on-tertiary-container" />
           <span className="text-on-tertiary-container font-label-bold text-xs uppercase tracking-widest">Architectural Foundation</span>
         </div>
-        <h1 className="font-headline-xl text-headline-xl mb-md">Tech <span className="text-primary">Stack</span></h1>
+        <h1 className="font-headline-xl text-[clamp(2.8rem,8vw,4.5rem)] leading-[1] tracking-tighter mb-md">Tech <span className="text-primary">Stack</span></h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
           A suite of modern technologies chosen for its performance, scalability, and robust development experience.
         </p>
@@ -48,9 +48,9 @@ export default function TechStack() {
           <h2 className="font-headline-md text-headline-md">Frontend <span className="text-white/20">/</span> Architecture</h2>
           <div className="h-px grow bg-white/10"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-md">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-md">
           {/* React Card */}
-          <div className="glass-surface md:col-span-2 p-md rounded-xl group hover:border-primary/50 transition-all duration-300 lime-glow flex flex-col">
+          <div className="glass-surface col-span-2 md:col-span-2 p-md rounded-xl group hover:border-primary/50 transition-all duration-300 lime-glow flex flex-col">
             <div className="flex justify-between items-start mb-md">
               <div className="p-sm bg-white/5 rounded-lg">
                 <IconBrandReact size={32} className="text-[#75c2d9]" />
@@ -61,7 +61,7 @@ export default function TechStack() {
             <p className="text-on-surface-variant text-sm">Hooks, Context API, and advanced pattern implementation for complex UIs.</p>
           </div>
           {/* Next.js Card */}
-          <div className="glass-surface md:col-span-2 p-md rounded-xl group hover:border-primary/50 transition-all duration-300 lime-glow flex flex-col">
+          <div className="glass-surface col-span-2 md:col-span-2 p-md rounded-xl group hover:border-primary/50 transition-all duration-300 lime-glow flex flex-col">
             <div className="flex justify-between items-start mb-md">
               <div className="p-sm bg-white/5 rounded-lg text-white">
                 <IconBrandNextjs size={32} />
@@ -72,7 +72,7 @@ export default function TechStack() {
             <p className="text-on-surface-variant text-sm">Server components, SSR/SSG strategies, and App Router proficiency.</p>
           </div>
           {/* Tailwind Card */}
-          <div className="glass-surface md:col-span-2 p-md rounded-xl group hover:border-primary/50 transition-all duration-300 lime-glow flex flex-col">
+          <div className="glass-surface col-span-2 md:col-span-2 p-md rounded-xl group hover:border-primary/50 transition-all duration-300 lime-glow flex flex-col">
             <div className="flex justify-between items-start mb-md">
               <div className="p-sm bg-white/5 rounded-lg">
                 <IconBrandTailwind size={32} className="text-[#52b3d0]" />
@@ -116,9 +116,9 @@ export default function TechStack() {
           <h2 className="font-headline-md text-headline-md">Backend <span className="text-white/20">/</span> Infrastructure</h2>
           <div className="h-px grow bg-white/10"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-md">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-md">
           {/* Large Backend Featured */}
-          <div className="glass-surface md:col-span-2 md:row-span-2 p-lg rounded-xl flex flex-col justify-start gap-lg border-l-4 border-on-tertiary-container bg-linear-to-br from-on-tertiary-container/5 to-transparent relative overflow-hidden">
+          <div className="glass-surface sm:col-span-2 md:col-span-2 md:row-span-2 p-lg rounded-xl flex flex-col justify-start gap-lg border-l-4 border-on-tertiary-container bg-linear-to-br from-on-tertiary-container/5 to-transparent relative overflow-hidden">
             {/* Dot grid decoration */}
             <div className="absolute top-4 right-4 grid grid-cols-6 gap-1.5 opacity-20 pointer-events-none">
               {Array.from({ length: 24 }).map((_, i) => (

@@ -17,9 +17,9 @@ export default function Home() {
       <HorizontalScrollCarousel>
 
         {/* PANEL 1: HERO */}
-        <div className="w-screen h-screen flex flex-col justify-center shrink-0 pt-24 px-8 md:px-16">
+        <div className="w-screen h-screen flex flex-col justify-center shrink-0 pt-28 md:pt-24 px-5 md:px-16">
           <div className="max-w-7xl mx-auto w-full">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 w-full items-center">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-20 w-full items-center">
               {/* Left Content */}
               <div className="col-span-1 md:col-span-7 lg:col-span-6 z-10 space-y-10 animate-blurred-fade-in">
                 <div className="space-y-6">
@@ -28,13 +28,13 @@ export default function Home() {
                     <span className="font-label-sm tracking-[0.2em] text-white/60 uppercase text-[10px]">Software Engineer</span>
                   </div>
 
-                  <h1 className="font-headline-xl text-[clamp(3.5rem,8vw,6rem)] leading-[0.95] tracking-tight text-primary">
+                  <h1 className="font-headline-xl text-[clamp(2.8rem,8vw,6rem)] leading-[0.95] tracking-tight text-primary">
                     Marcelo <br />
                     <span className="text-gradient-lime drop-shadow-[0_0_30px_rgba(198,241,116,0.3)]">Rosales</span>
                   </h1>
 
-                  <p className="font-body-lg text-white/50 text-xl md:text-2xl leading-relaxed max-w-2xl font-light">
-                    I work in <span className="text-white italic">full-stack web application development </span> prioritizing clean architecture, performance, and scalability. <p className="text-primary-container"></p>
+                  <p className="font-body-lg text-white/50 text-base md:text-2xl leading-relaxed max-w-2xl font-light">
+                    I work in <span className="text-white italic">full-stack web application development </span> prioritizing clean architecture, performance, and scalability. <span className="block text-primary-container"></span>
                   </p>
                 </div>
 
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
 
               {/* Right Content */}
-              <div className="col-span-1 md:col-span-5 lg:col-span-6 flex justify-center items-center animate-jelly animate-duration-900 animate-delay-200">
+              <div className="col-span-1 md:col-span-5 lg:col-span-6 flex justify-center items-center animate-jelly animate-duration-900 animate-delay-200 md:block hidden">
                 <div className="relative group">
                   <div className="absolute -inset-8 border border-white/5 rounded-[4rem] animate-[spin_20s_linear_infinite] opacity-50"></div>
                   <div className="absolute -inset-4 border border-primary-container/20 rounded-[3.5rem] opacity-30"></div>
@@ -92,13 +92,13 @@ export default function Home() {
         </div>
 
         {/* PANEL 2: PROJECTS HEADER */}
-        <div className="w-[85vw] md:w-[400px] h-screen flex flex-col justify-center shrink-0 px-8 md:px-16 ml-16 md:ml-32">
+        <div className="w-[90vw] md:w-[400px] h-screen flex flex-col justify-center shrink-0 px-6 md:px-16 ml-8 md:ml-32">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <div className="h-px w-12 bg-primary-container"></div>
               <span className="font-label-bold text-primary-container uppercase tracking-[0.4em] text-[10px]">Featured Work</span>
             </div>
-            <h2 className="font-headline-lg text-5xl md:text-7xl tracking-tighter text-white">Selected Works</h2>
+            <h2 className="font-headline-lg text-4xl md:text-7xl tracking-tighter text-white">Selected Works</h2>
           </div>
           <span className="mt-12 group inline-flex items-center gap-4 px-8 py-4 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-500 font-label-bold uppercase text-[10px] tracking-widest w-fit cursor-default select-none animate-pulse">
             Explore All Projects
@@ -124,7 +124,7 @@ export default function Home() {
             img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDERP8cHD9Unvb5GYfTWhpREloQa65cQBurXUQC-37F3upmnz0CStogqspQqGu2K-_l-GnQx1ttAZ6iKjoJIwGe0pGW0Yz3mjWaDmXjv3uKhXBodeHnusSp7nzdN44TlgRWnJmPwDMdWVgC0ZfMeBjSuGXnEeXi0APBIHih3Qb8KwBR3cVtBnm_3gBFA565UKxNu0fjSRF1mHq7n6wUDpeSJffpD9B-AiKUNytSkaddwVMpuvfPQj3AFfqyOoiNsO5IM4vGUM70WSI"
           }
         ].map((project, i) => (
-          <div key={i} className="group relative w-[85vw] md:w-[600px] h-[550px] shrink-0 mx-4 md:mx-8 rounded-[2.5rem] overflow-hidden glass-surface border-white/5 hover:border-primary-container/50 transition-all duration-700">
+          <div key={i} className="group relative w-[82vw] md:w-[600px] h-[420px] md:h-[550px] shrink-0 mx-3 md:mx-8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden glass-surface border-white/5 hover:border-primary-container/50 transition-all duration-700">
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 alt={project.title}
@@ -154,21 +154,21 @@ export default function Home() {
       </HorizontalScrollCarousel>
 
       {/* CTA Section */}
-      <section className="pt-32 px-8 md:px-16 max-w-7xl mx-auto mb-24 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
-        <div className="glass-surface rounded-[4rem] p-16 md:p-32 text-center border-white/5 relative overflow-hidden group">
+      <section className="pt-16 md:pt-32 px-5 md:px-16 max-w-7xl mx-auto mb-16 md:mb-24 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+        <div className="glass-surface rounded-[2rem] md:rounded-[4rem] p-8 md:p-32 text-center border-white/5 relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-container/10 blur-[150px] mr-[-400px] mt-[-400px] group-hover:bg-primary-container/20 transition-all duration-1000"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-rose-accent/10 blur-[130px] ml-[-300px] mb-[-300px] opacity-40"></div>
 
           <div className="relative z-10 max-w-4xl mx-auto space-y-10">
-            <h2 className="font-headline-lg text-6xl md:text-8xl tracking-tight text-white leading-[1.1]">
+            <h2 className="font-headline-lg text-4xl md:text-8xl tracking-tight text-white leading-[1.1]">
               What are you <br />
               <span className="text-gradient-lime italic">building</span>?
             </h2>
-            <p className="font-body-lg text-white/50 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto font-light">
+            <p className="block font-body-lg text-white/50 text-base md:text-2xl leading-relaxed max-w-2xl mx-auto font-light">
               “Let’s build something that works - and looks good doing it. I care more about what works than what impresses.”
             </p>
             <div className="pt-8">
-              <Link href="/contact" className="group relative px-16 py-8 rounded-[2.5rem] bg-white text-black font-label-bold text-lg uppercase tracking-[0.2em] transition-all duration-500 hover:bg-primary-container active:scale-95 shadow-[0_30px_60px_rgba(255,255,255,0.1)] overflow-hidden inline-block">
+              <Link href="/contact" className="group relative px-8 md:px-16 py-5 md:py-8 rounded-[2rem] md:rounded-[2.5rem] bg-white text-black font-label-bold text-sm md:text-lg uppercase tracking-[0.2em] transition-all duration-500 hover:bg-primary-container active:scale-95 shadow-[0_30px_60px_rgba(255,255,255,0.1)] overflow-hidden inline-block">
                 <span className="relative z-10">Initiate Collaboration</span>
                 <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </Link>

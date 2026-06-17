@@ -44,10 +44,10 @@ export default function RootLayout({
         {children}
 
         {/* Footer */}
-        <footer className="w-full py-10 bg-black/90 border-t border-white/10 mt-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center px-16 max-w-7xl mx-auto gap-8 font-label-bold text-xs uppercase tracking-[0.2em]">
+        <footer className="w-full py-8 md:py-10 bg-black/90 border-t border-white/10 mt-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center px-5 md:px-16 max-w-7xl mx-auto gap-5 md:gap-8 font-label-bold text-xs uppercase tracking-[0.2em]">
             <div className="text-lg font-black text-white">MarWare</div>
-            <div className="text-white/40">© {new Date().getFullYear()} MarWare. BUILT FOR THE FUTURE.</div>
+            <div className="text-white/40 text-center">© {new Date().getFullYear()} MarWare. BUILT FOR THE FUTURE.</div>
             <div className="flex gap-8">
               <a className="text-white/40 hover:text-rose-accent transition-colors duration-400 opacity-80 hover:opacity-100" href="https://github.com/MarcelowDev" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a className="text-white/40 hover:text-rose-accent transition-colors duration-400 opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/marcelo-rc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

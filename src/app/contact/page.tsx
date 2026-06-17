@@ -50,7 +50,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen pt-32 pb-24 px-6 md:px-16 max-w-7xl mx-auto relative overflow-visible grow w-full">
+    <main className="min-h-screen pt-28 md:pt-32 pb-24 px-5 md:px-16 max-w-7xl mx-auto relative overflow-visible grow w-full">
       <Toaster
         position="bottom-right"
         toastOptions={{
@@ -79,7 +79,7 @@ export default function Contact() {
               Available for projects
             </div>
             <h1 className="font-headline-xl text-headline-xl text-primary leading-none">Get in touch</h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg md:max-w-full">
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl md:max-w-full">
               Have a vision for a high-end digital product? Let&apos;s build something exceptional together. MarWare specializes in technical precision and creative expression.
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function Contact() {
               <div className="relative z-10 flex flex-col gap-4">
                 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Direct Contact</span>
                 <div className="flex flex-wrap items-center justify-between gap-4">
-                  <span className="font-headline-md text-2xl lg:text-xl xl:text-2xl text-primary tracking-tight break-all">marcelo@marware.dev</span>
+                  <span className="font-headline-md text-xl lg:text-xl xl:text-2xl text-primary tracking-tight break-all">marcelo@marware.dev</span>
                   <button className="flex shrink-0 items-center justify-center gap-2 bg-on-tertiary-container text-white px-6 py-3 rounded-lg font-label-bold text-label-bold active:scale-95 transition-all hover:brightness-110">
                     <IconCopy size={20} />
                   </button>
