@@ -107,47 +107,68 @@ export default function Home() {
         </div>
 
         {/* PANELS 3+: PROJECT CARDS */}
+
         {[
           {
             title: "Shorter Link",
             tag: "Full Stack",
-            img: "/links_shorter_1.png"
+            img: "/links_shorter_1.png",
+            url: "https://go.iammarcelo.com/",
+            finished: true
+
           },
           {
             title: "Expense OCR",
             tag: "Mobile App",
-            img: "/ocr_project.png"
+            img: "/ocr_project.png",
+            finished: false
           },
           {
             title: "Simple ERP",
             tag: "Full Stack",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDERP8cHD9Unvb5GYfTWhpREloQa65cQBurXUQC-37F3upmnz0CStogqspQqGu2K-_l-GnQx1ttAZ6iKjoJIwGe0pGW0Yz3mjWaDmXjv3uKhXBodeHnusSp7nzdN44TlgRWnJmPwDMdWVgC0ZfMeBjSuGXnEeXi0APBIHih3Qb8KwBR3cVtBnm_3gBFA565UKxNu0fjSRF1mHq7n6wUDpeSJffpD9B-AiKUNytSkaddwVMpuvfPQj3AFfqyOoiNsO5IM4vGUM70WSI"
+            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDERP8cHD9Unvb5GYfTWhpREloQa65cQBurXUQC-37F3upmnz0CStogqspQqGu2K-_l-GnQx1ttAZ6iKjoJIwGe0pGW0Yz3mjWaDmXjv3uKhXBodeHnusSp7nzdN44TlgRWnJmPwDMdWVgC0ZfMeBjSuGXnEeXi0APBIHih3Qb8KwBR3cVtBnm_3gBFA565UKxNu0fjSRF1mHq7n6wUDpeSJffpD9B-AiKUNytSkaddwVMpuvfPQj3AFfqyOoiNsO5IM4vGUM70WSI",
+            finished: false
           }
-        ].map((project, i) => (
-          <div key={i} className="group relative w-[82vw] md:w-[600px] h-[420px] md:h-[550px] shrink-0 mx-3 md:mx-8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden glass-surface border-white/5 hover:border-primary-container/50 transition-all duration-700">
-            <div className="absolute inset-0 overflow-hidden">
-              <Image
-                alt={project.title}
-                width={800}
-                height={1000}
-                className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale-[0.5] group-hover:grayscale-0"
-                src={project.img}
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
-            </div>
+        ].map((project, i) => {
+          const cardContent = (
+            <div className="group relative w-[82vw] md:w-[600px] h-[420px] md:h-[550px] shrink-0 mx-3 md:mx-8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden glass-surface border-white/5 hover:border-primary-container/50 transition-all duration-700 z-0">
+              {!project.finished && <div className="absolute z-50 opacity-0 w-full h-full bg-black/50 flex items-center justify-center text-4xl hover:opacity-100 transition-opacity duration-500">IN DEVELOPMENT</div>}
+              <div className="absolute inset-0 overflow-hidden">
+                <Image
+                  alt={project.title}
+                  width={800}
+                  height={1000}
+                  className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale-[0.5] group-hover:grayscale-0"
+                  src={project.img}
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
+              </div>
 
-            <div className="absolute inset-x-0 bottom-0 p-10 space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <p className="font-label-bold text-primary-container text-[10px] uppercase tracking-[0.3em]">{project.tag}</p>
-              <h3 className="font-headline-md text-3xl text-white">{project.title}</h3>
-              <div className="pt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex justify-between items-center">
-                <span className="text-white/40 text-[10px] font-label-bold uppercase tracking-widest underline underline-offset-8">Case Study</span>
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-primary-container transition-colors">
-                  <IconArrowUpRight size={20} className="text-white group-hover:text-primary-container transition-colors" />
-                </div>
+              <div className="absolute inset-x-0 bottom-0 p-10 space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <p className="font-label-bold text-primary-container text-[10px] uppercase tracking-[0.3em]">{project.tag}</p>
+                <h3 className="font-headline-md text-3xl text-white">{project.title}</h3>
+                {project.url && (
+                  <div className="pt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex justify-between items-center">
+                    <span className="text-white/40 text-[10px] font-label-bold uppercase tracking-widest underline underline-offset-8">Case Study</span>
+                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-primary-container transition-colors">
+                      <IconArrowUpRight size={20} className="text-white group-hover:text-primary-container transition-colors" />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-        ))}
+          );
+
+          if (project.url) {
+            return (
+              <Link href={project.url} key={i} target="_blank">
+                {cardContent}
+              </Link>
+            );
+          }
+
+          return <div key={i}>{cardContent}</div>;
+        })}
 
         {/* END PADDING PANEL */}
         <div className="w-[10vw] shrink-0"></div>

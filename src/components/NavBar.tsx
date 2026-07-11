@@ -19,7 +19,7 @@ export function NavBar() {
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] md:w-auto animate-slide-in-left animate-duration-900">
         <div className="glass-surface px-5 md:px-8 h-16 rounded-2xl flex items-center justify-between md:justify-start gap-4 md:gap-10 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xs backdrop-grayscale">
           <Link href="/" className="text-xl font-black tracking-tighter text-white group" onClick={() => setIsOpen(false)}>
-            MAR<span className="text-primary-container group-hover:text-rose-accent transition-colors">WARE</span>
+            I'M<span className="text-primary-container group-hover:text-rose-accent transition-colors">MARCELO</span>
           </Link>
 
           {/* Desktop links */}
